@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="beans.sa.Address" id="address1" autowire-candidate="false">
+	<constructor-arg value="Hyderabad"/>
+	<constructor-arg value="Telangana"/></bean> 
+	
+	 <bean class="beans.sa.Address" id="address2">
+	<constructor-arg value="Bangalore"/>
+	<constructor-arg value="Karnataka"/></bean> 
+   
+    <bean class="beans.sa.Student" id="firstObject" autowire="constructor">
+	<constructor-arg value="7" index ="0"/>
+	<constructor-arg value="namea" index = "1"/>
+	</bean>
+
+</beans>
